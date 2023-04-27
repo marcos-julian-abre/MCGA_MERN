@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "client": "serve -s frontend/build",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start-client": "cd frontend && node server.js"
+
   },
   "author": "marcos abre",
   "license": "ISC",
