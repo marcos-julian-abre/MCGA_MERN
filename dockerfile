@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY ["package.json", "package-lock.json*", "./"]
 
+RUN npm i nodemon
 RUN npm i concurrently
 RUN npm install --production
 RUN npm run dev
