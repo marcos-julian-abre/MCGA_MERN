@@ -7,8 +7,7 @@ COPY ["package.json", "package-lock.json*", "./"]
 RUN npm i nodemon
 RUN npm i concurrently
 RUN npm install --production
-RUN npm run dev
 
 COPY . .
 
-CMD ["node", "server.js"]
+CMD ["npm", "dev"]
